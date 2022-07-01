@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Web-forms</title>
 </head>
 <body>
@@ -13,40 +14,48 @@
             <h1>Create Account</h1>
         </header>
         <main>
-            <div>
+            <form>
                 <label for="First name">First name</label>
-                <input type="text" name="First name">              
+                <input type="text" name="First name">
+            </form>             
+            <form> 
                 <label for="Last name">Last name</label>
                 <input type="text" name="Last name">
-            </div>
-            <div>
+            </form>
+            <form>
                 <label for="Email">Email</label>
                 <input type="Email">
                 <p><small> We'll never share your email with anyone else. </small></p>
-            </div>
-            <div>
-                <input type="radio" id="Sex1" name="SEX" value="Male" >
-                <label for="Sex1">Male</label>
-                <input type="radio" id="Sex2" name="SEX" value="Female" >
-                <label for="Sex2">Female</label>
-            </div>
-            <div>
-                <label for="Country">Country</label>
-                <select name="Country" id="" >
-                <option value="" disabled="disabled" selected="selected">Select</option>
-                <option value="Ukraine">Ukraine</option>
-                <option value="Poland">Poland</option> </select>                    
+            </form>
+            <form>
+                <fieldset>
+                    <input type="radio" id="Sex1" name="SEX" value="Male" >
+                    <label for="Sex1">Male</label>
+                    <input type="radio" id="Sex2" name="SEX" value="Female" >
+                    <label for="Sex2">Female</label>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <label for="Country">Country</label>
+                    <select name="Country" id="" >
+                    <option value="" disabled="disabled" selected="selected">Select</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Poland">Poland</option> </select>
+                </fieldset>
+            </form>                    
+            <form>    
                 <label>City</label>
                 <input type="text" id="city" name="City">
-            </div>        
-            <div>
+            </form>        
+            <form>
                 <input type="submit" value="Sign Up">
-            </div>
-        </main>    
-        <footer>
+            </form>
             <div>
                 <p>By clicking the 'Sign Up' button, you confirm that you accept our <a href="">Terms of Use</a> and <a href=""> Privacy Policy </a></p>
             </div>
+        </main>        
+        <footer>    
             <div>
                 <span>Have an account?</span>
                 <span><a href=""><b>Log in</b></a></span>
@@ -58,45 +67,56 @@
             <h1>Profile</h1>
         </header>
         <main>
-            <div>
-                <form>
-                <img src="images/myPhoto.png" alt="My photo">
-            </div>
-            <div>
-                <input type='file' title=" "/>
-                <p><small>Up to 1 MB (300x300 px)</small></p>
-            </div>
-            <div>
-                <button style="font-size:14px"> <i class="fa fa-trash-o"></i></button>
-                <!---або <input type="reset" value="Reset">  </form> -->
-            </div>
-            <div>
-                <label for="Country">Country</label>
-                <select name="Country" id="" >
-                <option value="" disabled="disabled" selected="selected">Select</option>
-                <option value="Ukraine">Ukraine</option>
-                <option value="Poland">Poland</option> </select>                    
+            <form>
+                <fieldset>
+                    <input type='file' title=" "/>
+                    <img src="#" alt="selected image" />
+                    <p><small>Up to 1 MB (300x300 px)</small></p>
+                    <button style="font-size:14px"> <i class="fa fa-trash-o"></i></button>
+                    <!---або <input type="reset" value="Reset">  </form> -->
+                </fieldset>    
+            </form>
+            <form>
+                <fieldset>
+                    <label for="Country">Country</label>
+                    <select name="Country" id="" >
+                    <option value="" disabled="disabled" selected="selected">Select</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Poland">Poland</option> </select>  
+                </fieldset> 
+            </form>
+            <form>  
                 <label>City</label>
                 <input type="text" id="city" name="City">
-            </div>        
-            <div>
+            </form>
+            <form>        
                 <label for="name">Name</label>
                 <input type="text" name="name">
-            </div>
-            <div>  
+            </form>
+            <form>  
                 <label for="Email"> Email</label>
                 <input type="Email">
-            </div>
-            <div>
+            </form>
+            <form>
                 <label for="zipCode">Zip Code</label>
                 <input type="number" id="zipCode" name="zip code" min="5" max="6">
+            </form>
+            <form>
                 <label for="tel">Phone Number:</label>
                 <input type="tel" id="tel" name="tel">                  
-            </div>
-            <div>
+            </form>
+            <form>
                 <input type="submit" value="Update">
-            </div>
-        </main>    
+            </form>
+        </main> 
     </section>         
 </body>
 </html>
+
+<!-----коли потрібно об'єднувати через form а коли через <fieldset></fieldset> / чому botton працює як reset --
+
+    <form id="select_spec_form">
+  <fieldset id="submit_button">
+    <input name="submit[submit]" id="submit_button" value="View" type="submit">
+  </fieldset>
+</form>
